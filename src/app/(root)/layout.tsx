@@ -1,6 +1,8 @@
+import { onBoardUser } from '@/actions/auth';
 import React from 'react'
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout = async ({ children }: { children: React.ReactNode }) => {
+    await onBoardUser();
     return (
         <div>{children}</div>
     )
